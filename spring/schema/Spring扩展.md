@@ -167,3 +167,10 @@ public class SchemaTest {
 
 ```
 
+[全部代码](https://github.com/dchjmichael/notes/tree/master/spring/schema/code)
+## 参考文献
+- [Extensible XML authoring](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#xml-custom)
+- [基于Spring可扩展Schema提供自定义配置支持](http://blog.csdn.net/cutesource/article/details/5864562)
+
+
+
