@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 	xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:my="http://www.mycompany.com/schema/my"
+		xsi:schemaLocation="
+	        http://www.springframework.org/schema/beans 
+	        http://www.springframework.org/schema/beans/spring-beans.xsd
+	        http://www.mycompany.com/schema/my 
+	        http://www.mycompany.com/schema/my.xsd">
+
+	<my:car id="Ferrari458" brand="Ferrari" engine="4.5" horsePower="605" />
+
+</beans>
