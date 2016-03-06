@@ -2,6 +2,7 @@
 Bookshelf是一个基于[Knex](http://knexjs.org/)的ORM框架，提供了一对一，一对多，多对多的关联映射。
 
 ##安装
+
 ```sh
 $ npm install knex --save
 $ npm install bookshelf --save
@@ -14,7 +15,8 @@ $ npm install sqlite3
 ```
 
 初始化：
-```
+
+```javascript
 var knex = require('knex')({
   client: 'mysql',
   connection: {
@@ -34,6 +36,7 @@ var bookshelf = require('bookshelf')(knex);
 ![](http://i.imgur.com/Ry18XMG.png)
 
 定义模型：
+
 ```javascript
 var bookshelf = require("./shelf");
 
@@ -53,7 +56,7 @@ Book = bookshelf.Model.extend({
 
 ## 插入
 
-```
+```javascript
 bookshelf.knex
 	.select(bookshelf.knex.raw("nextval('author_seq') as id"))	//用PG的sequence生成id
 	.first().then(row=>{
@@ -61,4 +64,26 @@ bookshelf.knex
 }).then(st=>{
     console.log(st)
 });
+```
+
+##查询
+```javascript
+Author.where({author_name: 'jbl'}).fetchAll().then(
+    model => {
+        model.map(m => {
+            console.log(m.toJSON());
+        });
+    }
+);
+
+/*
+new Author()
+    .query({where: {author_name: 'jbl'}})
+    .fetchAll()
+    .then(model => {
+       model.map(m=>{
+           console.log(m.toJSON())
+       })
+    });
+*/
 ```

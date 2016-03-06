@@ -7,10 +7,10 @@ var knex = require('knex')({
     client: 'pg',
     connection: {
         host     : '127.0.0.1',
-        port:1921,
-        user     : 'postgres',
-        password : 'postgres',
-        database : 'jj',
+        port:5432,
+        user     : 'joeytai',
+        password : 'joeytai',
+        database : 'play',
         charset  : 'utf8'
     }
 });
